@@ -1,26 +1,19 @@
 import 'package:flutter/material.dart';
 
-class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Theme.of(context).primaryColor,
-      width: MediaQuery.of(context).size.width,
-      height: 70,
-      padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: Row(
-        children: [
-          Image.asset("assets/images/logo.png"),
-          const Text(
-            "Bad Bunny",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-          ),
-          const Spacer(),
-          const CircleAvatar(),
-        ],
+AppBar getAppBar() {
+  return AppBar(
+      title: SizedBox(
+        width: 100,
+        height: 100,
+        child: Image.asset("assets/images/logo.png"),
       ),
-    );
-  }
+      centerTitle: true,
+      backgroundColor: const Color.fromRGBO(34, 34, 34, 1),
+      actions: [
+        CircleAvatar(
+            child: ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: Image.asset("assets/images/avatar.jpg",
+                    fit: BoxFit.cover))),
+      ]);
 }

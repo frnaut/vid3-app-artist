@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vid3_artist/pages/home_page.dart';
+import 'package:vid3_artist/pages/profile_page.dart';
 import 'package:vid3_artist/themes/theme.dart';
 
 void main() {
@@ -16,7 +17,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: theme,
       initialRoute: "/",
-      routes: {"/": (context) => const HomePage()},
+      routes: {
+        "/": (context) => const HomePage(),
+        "/profile": (context) => const ProfilePage()
+      },
     );
   }
 }

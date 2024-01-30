@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vid3_artist/widgets/barchart/bar_chart.dart';
 import 'package:vid3_artist/widgets/custom_appbar.dart';
+import 'package:vid3_artist/widgets/custom_drawer.dart';
 import 'package:vid3_artist/widgets/most_popular_card.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,11 +9,12 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
         child: Scaffold(
-      body: SingleChildScrollView(
+      appBar: getAppBar(),
+      drawer: getDrawer(context),
+      body: const SingleChildScrollView(
         child: Column(children: [
-          CustomAppBar(),
           BarChart(),
           MostPopularCard(),
         ]),
