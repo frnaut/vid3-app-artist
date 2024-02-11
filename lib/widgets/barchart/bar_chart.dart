@@ -33,7 +33,7 @@ class BarChart extends StatelessWidget {
             ],
           ),
         ),
-        Row(
+        const Row(
           children: [
             Bar(text: "Ene", value: 0.1),
             Bar(text: "Feb", value: 0.3),

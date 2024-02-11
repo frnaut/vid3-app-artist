@@ -4,7 +4,7 @@ class Bar extends StatelessWidget {
   final String text;
   final double value;
 
-  Bar({super.key, this.text = "Ene", this.value = 10});
+  const Bar({super.key, this.text = "Ene", this.value = 10});
 
   @override
   Widget build(BuildContext context) {
